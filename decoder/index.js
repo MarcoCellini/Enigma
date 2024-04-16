@@ -1,9 +1,9 @@
-import { second_convertion } from "./rotor_02.js";
+import { third_convertion } from "./rotor_03.js";
 
 let out = "";
 
-"jhhahutmjlgvrvohn".split('').forEach((e, i) => {
-    out += second_convertion(i, e);
+"ahbb".split('').forEach((e, i) => {
+    out += third_convertion(i, e);
 });
 
 console.log(out);

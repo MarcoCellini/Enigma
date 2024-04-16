@@ -1,3 +1,5 @@
+import { third_convertion } from "./rotor_03.js";
+
 let connections = [
     'v', 'm', 'r', 't', 'p', 'q',
     'w', 'u', 'g', 'i', 'x', 'z',
@@ -20,5 +22,5 @@ const rotate = (c) => {
 
 export const second_convertion = (count, char) => {
     count % 26 == 0 && count != 0 ? rotate(Math.floor(count / 26)) : null;
-    return connections[alphabetic_order.indexOf(char)];
+    return third_convertion(count, connections[alphabetic_order.indexOf(char)]);
 };

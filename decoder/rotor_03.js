@@ -1,9 +1,11 @@
+import { second_convertion } from "./rotor_02.js";
+
 let connections = [
-    'e', 'd', 'r', 'v', 'i', 'n',
-    'j', 'g', 'p', 'u', 'f', 't',
-    'c', 'b', 'a', 'h', 'k', 'q',
-    'o', 'x', 'w', 'y', 'm', 's',
-    'l', 'z'
+    'd', 'r', 't', 'a', 'f', 'g',
+    'e', 'l', 'n', 'z', 'm', 'o',
+    'q', 'b', 'h', 's', 'u', 'k',
+    'x', 'p', 'i', 'j', 'y', 'v',
+    'w', 'c'
 ];
 
 const alphabetic_order = [
@@ -18,7 +20,7 @@ const rotate = (c) => {
     connections = [...connections.slice(c), ...connections.slice(0, c)];
 };
 
-export const convert = (count, char) => {
-    rotate(count);
-    return connections[alphabetic_order.indexOf(char)];
+export const third_convertion = (count, char) => {
+    count % (26 ** 2) == 0 && count != 0 ? rotate(Math.floor(count / (26 ** 2))) : null;
+    return second_convertion(count, alphabetic_order[connections.indexOf(char)]);
 };

@@ -1,9 +1,10 @@
 import { convert } from "./rotor_01.js";
+import process from 'node:process';
 
 let out = "";
 
-"ciro".split('').forEach((e, i) => {
+process.argv[2].split('').forEach((e, i) => {
     out += convert(i, e);
 });
 
-console.log(out);
+console.log(`Clear text:\t${process.argv[2]}\nChyper text:\t${out}`);
